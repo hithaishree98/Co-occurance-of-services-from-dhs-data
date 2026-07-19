@@ -1,0 +1,17 @@
+# Data — the 1.4 GB CSV and derived files must never be committed
+data/
+
+# Generated outputs
+outputs/
+
+# Python environment (rebuildable from pip install)
+.venv/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Scratch/working files
+scratchpad/
+
+# OS / editor cruft
+.DS_Store
