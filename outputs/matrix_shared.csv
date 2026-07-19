@@ -1,0 +1,26 @@
+# INTERNAL / INTERMEDIATE -- full unmasked matrix, no min-support floor applied.
+# The floor (config.MIN_SUPPORT) applies only to outputs/pairs_ranked.csv and the
+# heatmaps. Do not publish or quote cells from this file directly.
+,Children_Attending_Early_Childhood_Programs_Managed_by_DHS,Children_Receiving_Child_Welfare_Services,Children_Receiving_DHS_Funded_Out_of_School_Programs,Children_Receiving_Early_Intervention_Services,Children_in_Care,Families_Receiving_Child_Welfare_Services,Homeless_Population,Homicides,Individuals_Receiving_DHS_Services,Individuals_Receiving_Family_Strengthening_Programs,Individuals_Receiving_Homelessness_and_Housing_Services,Individuals_Receiving_Income_Supports,Individuals_Receiving_Intellectual_Disability_Services,Individuals_Receiving_Mental_Health_Services,Individuals_Receiving_Substance_Use_Disorder_Services,Involuntary_Commitments,Jail_Population,Mental_Health_Crises,Older_Adults_Receiving_Services,Overdoses,Parents_Receiving_Child_Welfare_Services,Suicides
+Children_Attending_Early_Childhood_Programs_Managed_by_DHS,349,53,22,11,18,0,2,0,15,36,5,163,2,10,0,1,0,0,0,0,0,0
+Children_Receiving_Child_Welfare_Services,53,7306,230,656,2211,17,155,1,2815,557,511,6557,120,2014,37,53,9,250,0,3,29,2
+Children_Receiving_DHS_Funded_Out_of_School_Programs,22,230,1198,10,78,3,14,2,292,45,42,692,9,173,5,5,0,11,0,2,3,1
+Children_Receiving_Early_Intervention_Services,11,656,10,6752,438,5,55,1,961,100,134,4301,48,748,0,24,0,75,0,4,0,2
+Children_in_Care,18,2211,78,438,2237,4,53,0,1202,185,165,2119,26,1001,11,30,0,125,0,0,8,0
+Families_Receiving_Child_Welfare_Services,0,17,3,5,4,3118,38,12,1547,96,315,1836,24,684,495,64,116,107,32,45,2446,5
+Homeless_Population,2,155,14,55,53,38,3415,0,1825,54,3415,2725,22,1257,441,189,218,535,82,10,124,0
+Homicides,0,1,2,1,0,12,0,172,21,1,5,106,0,11,3,3,6,3,3,5,14,0
+Individuals_Receiving_DHS_Services,15,2815,292,961,1202,1547,1825,21,82122,1567,9772,74268,4494,55263,10372,5003,3593,7189,2812,221,4243,16
+Individuals_Receiving_Family_Strengthening_Programs,36,557,45,100,185,96,54,1,1567,2986,332,2796,44,823,202,43,59,93,54,3,202,1
+Individuals_Receiving_Homelessness_and_Housing_Services,5,511,42,134,165,315,3415,5,9772,332,21823,17138,164,5004,1841,490,549,1031,411,62,779,6
+Individuals_Receiving_Income_Supports,163,6557,692,4301,2119,1836,2725,106,74268,2796,17138,502530,6111,50410,12043,3646,4630,5543,5311,436,4723,66
+Individuals_Receiving_Intellectual_Disability_Services,2,120,9,48,26,24,22,0,4494,44,164,6111,6360,2438,136,140,132,236,136,11,91,0
+Individuals_Receiving_Mental_Health_Services,10,2014,173,748,1001,684,1257,11,55263,823,5004,50410,2438,55263,5278,5002,2497,7185,1117,123,1704,10
+Individuals_Receiving_Substance_Use_Disorder_Services,0,37,5,0,11,495,441,3,10372,202,1841,12043,136,5278,12812,459,1676,947,275,97,1242,2
+Involuntary_Commitments,1,53,5,24,30,64,189,3,5003,43,490,3646,140,5002,459,5010,303,2053,136,16,142,3
+Jail_Population,0,9,0,0,0,116,218,6,3593,59,549,4630,132,2497,1676,303,6922,404,254,42,385,0
+Mental_Health_Crises,0,250,11,75,125,107,535,3,7189,93,1031,5543,236,7185,947,2053,404,7245,166,26,277,0
+Older_Adults_Receiving_Services,0,0,0,0,0,32,82,3,2812,54,411,5311,136,1117,275,136,254,166,16759,66,75,2
+Overdoses,0,3,2,4,0,45,10,5,221,3,62,436,11,123,97,16,42,26,66,1319,67,0
+Parents_Receiving_Child_Welfare_Services,0,29,3,0,8,2446,124,14,4243,202,779,4723,91,1704,1242,142,385,277,75,67,7078,3
+Suicides,0,2,1,2,0,5,0,0,16,1,6,66,0,10,2,3,0,0,2,0,3,1177

@@ -1,8 +1,9 @@
 # Data — the 1.4 GB CSV and derived files must never be committed
 data/
 
-# Generated outputs
-outputs/
+# outputs/ is COMMITTED as of Phase 1 (2026-07-19): pairs_gateA_approved.csv and the filled
+# worksheet carry analyst judgment and are not regenerable; the matrices/heatmap are kept
+# alongside them so the committed state is self-consistent.
 
 # Python environment (rebuildable from pip install)
 .venv/

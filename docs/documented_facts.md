@@ -10,6 +10,15 @@ Source abbreviations:
 - **[UG]** Synthetic Data User Guide
 - **[GEN]** Generating a Fully Synthetic Human Services Dataset
 - **[DW]** Allegheny County Data Warehouse (July 2018)
+- **[QC]** QuickCount program definitions — the system the 22 service categories derive from.
+  NOT one of the four source PDFs. Two caveats bind its use: it is a CURRENT-DAY page (reviewed
+  2026-07-19), so its definitions may POSTDATE the 2021 data described here; and the definitions
+  describe the confidential source system, not the synthetic file.
+  PROVENANCE: the QuickCount program definitions were REVIEWED DIRECTLY BY THE ANALYST on
+  2026-07-19, and [QC] citations rest on that review. A local copy is not yet archived in
+  docs/sources/ — the QuickCount help page lists "Program Definitions" as a downloadable
+  Excel/PDF but exposes no resolvable link to it — so [QC] is not independently re-checkable
+  from this repo alone. Archive the reviewed file to docs/sources/ when available.
 
 ---
 

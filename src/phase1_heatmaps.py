@@ -11,8 +11,26 @@ from config import MIN_SUPPORT
 cond = pd.read_csv("outputs/matrix_conditional.csv", index_col=0, comment='#')
 lift = pd.read_csv("outputs/matrix_lift.csv", index_col=0, comment='#')
 shared = pd.read_csv("outputs/matrix_shared.csv", index_col=0, comment='#')
-short = {c: c.replace('Individuals_Receiving_','').replace('Children_Receiving_','Child ').replace('_',' ')
+# Explicit labels for the child-welfare / child-program cluster. The general rule below
+# turned Children_Receiving_Child_Welfare_Services into "Child Child Welfare Services";
+# these also keep the four child-welfare categories visibly parallel, which matters because
+# they partition by role rather than nest (findings_log, 2026-07-19).
+OVERRIDES = {
+    'Families_Receiving_Child_Welfare_Services':      'Child Welfare: Families',
+    'Children_Receiving_Child_Welfare_Services':      'Child Welfare: Children',
+    'Parents_Receiving_Child_Welfare_Services':       'Child Welfare: Parents',
+    'Children_in_Care':                               'Child Welfare: Children in Care',
+    'Children_Receiving_Early_Intervention_Services': 'Early Intervention (children)',
+    'Children_Receiving_DHS_Funded_Out_of_School_Programs': 'Out-of-School Programs (children)',
+}
+short = {c: OVERRIDES.get(
+             c, c.replace('Individuals_Receiving_','').replace('Children_Receiving_','Child ')
+                 .replace('_',' '))
          for c in cond.columns}
+# Duplicate labels would silently misalign the .loc reindex below, not error out.
+if len(set(short.values())) != len(short):
+    dupes = sorted({v for v in short.values() if list(short.values()).count(v) > 1})
+    raise ValueError(f"Short service labels collide: {dupes}. Fix OVERRIDES before plotting.")
 for df in (cond, lift, shared): df.rename(index=short, columns=short, inplace=True)
 order = shared.sum(axis=1).sort_values(ascending=False).index
 cond, lift, shared = cond.loc[order,order], lift.loc[order,order], shared.loc[order,order]
