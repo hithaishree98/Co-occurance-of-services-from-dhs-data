@@ -190,7 +190,10 @@ Containment measured as shared / min(size_A, size_B) for each of the six
 [UG, "About the Data"] indented child→parent pairs.
 OUTPUT: child -> parent child parent shared contained
 Homeless_Population -> Homelessness_and_Housing_Services 3,415 21,823 3,415 100.0%
-Mental_Health_Crises -> Mental_Health_Services 7,245 55,262 7,185 99.2%
+Mental_Health_Crises -> Mental_Health_Services 7,245 55,263 7,185 99.2%
+[CORRECTION 2026-07-19: parent size originally read 55,262 — back-calculated from a rounded
+conditional when the entry was drafted. The matrix diagonal (outputs/matrix_shared.csv) is
+authoritative and reads 55,263. No effect on the containment percentage or any conclusion.]
 Parents_CW -> Families_CW 7,078 3,118 2,446 34.6% (partial)
 Children_CW -> Families_CW 7,306 3,118 17 0.2%
 Children_in_Care -> Families_CW 2,237 3,118 4 0.2%
@@ -244,8 +247,24 @@ denotes a reporting taxonomy, not set containment.
           (c) pair 4's size inversion would require a ~95% undercount of a SINGLE service,
               contradicting the documented single-service fidelity [GEN].
 
-INFER: (analyst)
-DECIDES: (analyst)
+INFER:    The [UG] indentation is a reporting layout, not a containment map: it
+          corresponds to measured set-containment for only 2 of 6 documented pairs
+          (Homeless⊂Housing 100%, MH_Crises⊂MH_Services 99.2%). The child-welfare
+          cluster partitions by ROLE per the [QC] definitions — {Families, Parents}
+          adult-side vs {Children_CW, Children_in_Care} child-side, near-disjoint
+          blocks with cross-cells of 4–29 persons — and Early Intervention is a
+          sibling referral pipeline (AFIT), not a subset. The rival explanation
+          (synthesis error) is ruled out: ~34.4% median error cannot produce a
+          99.8% collapse, true containment survived synthesis intact in the two
+          verified pairs, and the EI size inversion would require a ~95%
+          single-service undercount contradicting documented single-service
+          fidelity.
+DECIDES:  Classifications applied as in pairs_gateA_approved.csv: 2 STRUCTURAL
+          (verified nesting), role-partition pairs STRUCTURAL_BY_DEFINITION.
+          Indentation in [UG] is not to be read as containment anywhere else in
+          this project. The finding itself (indentation semantics undefined;
+          containment must be measured, not assumed) carries into the methodology
+          memo as a data-documentation observation.
 
 ---
 
@@ -333,5 +352,24 @@ CHECK:    Consistent with the project premise test (project_intent.md): the co-o
           undercount caveat for older adults [UG, "Limitations"], and Income_Supports
           demographic fidelity is strongest for common services [GEN] — both bear on how
           far the lift=0.34 can be trusted; noted here, not resolved.
-INFER:    (analyst)
-DECIDES:  (analyst)
+INFER:    The co-occurrence premise holds, narrowly. Of 231 possible pairs, 139
+          cleared the 30-person floor; 108 of those fall below the 0.5% fidelity
+          tier and are ineligible; 7 resolve as structural (verified nesting,
+          role partition, definition, or inferred recording scope); 20 were
+          classified NOT_A_FINDING (care-pathway consequence, undefined residual
+          category, or prevalence artifacts of the 94.1% income-supports base
+          rate). Four findings survive, all at/above tier: MH_Services↔SUD
+          (shared 5,278, lift 3.98 — co-occurring disorders), HH_Services↔MH
+          (5,004, 2.21 — housing–behavioral-health nexus), Income_Supports↔ID
+          (6,111, containment 96.1% — a coverage claim, not an association), and
+          Income_Supports↔Older_Adults (5,311, lift 0.34 — negative association,
+          carrying the documented older-adult undercount caveat and the plausible
+          federal-benefit-substitution explanation). The dataset supports a
+          tightly scoped cross-system account, not a sweeping one — consistent
+          with the caveat built into project_intent.md.
+DECIDES:  Proceed to Phase 2 centered on a finding to be selected from the four.
+          Structural, BELOW_TIER, and NOT_A_FINDING pairs are excluded from
+          findings. Below-tier observations of interest (jail↔SUD, shared 1,676,
+          lift 10.1) may appear in discussion sections only, explicitly flagged.
+          The grounding pipeline's findings set derives from the four INFORMATIVE
+          rows of pairs_gateA_approved.csv only.
